@@ -22,9 +22,11 @@ const ListJobs = (props: DetailListJobs) => {
               <p className="text-slate-500 font-bold text-sm">
                 {props.location}
               </p>
-              <p className="text-slate-500 font-medium text-sm">
-                {formatDate(props.created_at)}
-              </p>
+              {props.created_at &&
+                <p className="text-slate-500 font-medium text-sm">
+                  {formatDate(props.created_at)}
+                </p>
+              }
             </div>
           </div>
         </li>
